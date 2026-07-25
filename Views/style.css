@@ -163,3 +163,11 @@ tbody tr:hover {
 
 }
 
+.acciones{
+
+    display: flex;
+
+    gap: 10px;
+
+}
+

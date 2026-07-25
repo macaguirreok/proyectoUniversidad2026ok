@@ -129,6 +129,8 @@ filaUno.appendChild(tdEdad);
 
 const tdAcciones = document.createElement("td");
 
+tdAcciones.className = "acciones";
+
 filaUno.appendChild(tdAcciones);
 
 //Porque los botones son los que le dan la "acción"
@@ -146,6 +148,55 @@ const botonEliminar = document.createElement("button");
 botonEliminar.textContent = "Eliminar";
 
 tdAcciones.appendChild(botonEliminar);
+
+//! evento para el botón de crear alumno
+
+//!primero: function mosrarFormulario
+
+function mostrarFormularioAlumno(){
+
+    const formulario = document.createElement("form");
+
+    divPrincipal.appendChild(formulario);
+    //esto crea un formulario vacío, dentro del contenedor principal.
+
+    // -- Agregamos el titulo:
+
+    const tituloFormulario = document.createElement("h2");
+    
+    tituloFormulario.textContent = "Crear alumno ";
+
+    formulario.appendChild(tituloFormulario);
+
+    // -- Agregamos el campo de nombre:
+
+    const inputNombre = document.createElement("input");
+
+    inputNombre.placeholder = "Nombre del alumno";
+
+    formulario.appendChild(inputNombre);
+
+    // -- y uno para edad:
+
+    const inputEdad = document.createElement("input");
+
+    inputEdad.placeholder = "Edad";
+
+    formulario.appendChild(inputEdad);
+
+    // -- y el boton guardar
+
+    const botonGuardar = document.createElement("button");
+
+    botonGuardar.textContent = "Guardar alumno";
+
+    formulario.appendChild(botonGuardar);
+}
+
+//! usamos la función en el evento:
+
+botonCrearALumnos.addEventListener("click" , mostrarFormularioAlumno);
+
 
 
 
