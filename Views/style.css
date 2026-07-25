@@ -171,3 +171,25 @@ tbody tr:hover {
 
 }
 
+input{
+
+    margin: 0.2%;
+    
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 1.5%;
+
+    
+}
+
+.divContInp{
+    background-color:#202123;
+
+    border-radius: 10px;
+
+    padding: 3% 1%;
+}
+
+
