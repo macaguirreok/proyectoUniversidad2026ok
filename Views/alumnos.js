@@ -168,21 +168,13 @@ function mostrarFormularioAlumno(){
 
     formulario.appendChild(tituloFormulario);
 
-    //* Necesito que los inputs esten en otro contenedor, para el color
-
-    const divContenedorInp = document.createElement("div");
-
-    divContenedorInp.className = "divContInp";
-
-    formulario.appendChild(divContenedorInp);
-
     // -- Agregamos el campo de nombre:
 
     const inputNombre = document.createElement("input");
 
     inputNombre.placeholder = "Nombre del alumno";
 
-    divContenedorInp.appendChild(inputNombre);
+    formulario.appendChild(inputNombre);
 
     // -- y uno para edad:
 
@@ -190,7 +182,7 @@ function mostrarFormularioAlumno(){
 
     inputEdad.placeholder = "Edad";
 
-    divContenedorInp.appendChild(inputEdad);
+    formulario.appendChild(inputEdad);
 
     // -- y el boton guardar
 
@@ -198,7 +190,7 @@ function mostrarFormularioAlumno(){
 
     botonGuardar.textContent = "Guardar alumno";
 
-    divContenedorInp.appendChild(botonGuardar);
+    formulario.appendChild(botonGuardar);
 }
 
 //! usamos la función en el evento:

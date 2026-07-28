@@ -67,19 +67,19 @@ textoPrincipal.textContent = "Sistema universitario";
 // Lo agregamos al divPrincipal
 divPrincipal.appendChild(textoPrincipal);
 
-// Creamos el botón de crear profesor
+// Creamos el botón de crear materia
 
 const botonCrearProf = crearBoton("botonCrear");
-botonCrearProf.textContent = "Crear profesor";
+botonCrearProf.textContent = "Crear Materia";
 divPrincipal.appendChild(botonCrearProf);
 
-// Creo subtitulo h2, profesores
+// Creo subtitulo h2, Materias
 
 const Textoh2 = crearTextoh2("textoSubtit");
-Textoh2.textContent = "Profesores";
+Textoh2.textContent = "Materias";
 divPrincipal.appendChild(Textoh2);
 
-// Creo sección alumnos para poner la tabla
+// Creo sección materias para poner la tabla
 
 const seccionProfesores = document.createElement("section");
 divPrincipal.appendChild(seccionProfesores);
@@ -102,9 +102,13 @@ function crearColumnaCabecera(idNombre){
     return th;
 }
 
-const nombreProfesor = crearColumnaCabecera("nombreProf");
-nombreProfesor.textContent = "Nombre";
+const nombreProfesor = crearColumnaCabecera("nombreMateria");
+nombreProfesor.textContent = "Materia";
 filaCabecera.appendChild(nombreProfesor);
+
+const materia = crearColumnaCabecera("columnaMateria");
+materia.textContent = "Profesor";
+filaCabecera.appendChild(materia);
 
 const acciones = crearColumnaCabecera("acciones");
 acciones.textContent = "Acciones";
@@ -129,9 +133,13 @@ function crearColumnaTbody(idNombre){
     return td;
 }
 
-const nombreHCProf = crearColumnaTbody("HCnombreProf");
-nombreHCProf.textContent = "Laurita";
-tr.appendChild(nombreHCProf);
+const nombreHCMateria = crearColumnaTbody("HCnombreMateria");
+nombreHCMateria.textContent = "Química";
+tr.appendChild(nombreHCMateria);
+
+const nombreHCprofesor = crearColumnaTbody("HCnombreProfesor");
+nombreHCprofesor.textContent = "Laurita";
+tr.appendChild(nombreHCprofesor);
 
 const accionesHC = crearColumnaTbody("HCacciones");
 accionesHC.className = "acciones";
@@ -156,17 +164,17 @@ divPrincipal.appendChild(formulario);
 
 //Agregamos el título
 const titulo = crearTextoh2("CrearProf");
-titulo.textContent = "Crear profesor";
+titulo.textContent = "Crear materia";
 formulario.appendChild(titulo);
 
 // Agrego el input
 
 const input = crearInput("inputNombre");
-input.placeholder = "Nombre del profesor";
+input.placeholder = "Nombre de la materia";
 formulario.appendChild(input);
 
 const botonAgregar = crearBoton("guardar");
-botonAgregar.textContent = "Guardar profesor";
+botonAgregar.textContent = "Guardar materia";
 formulario.appendChild(botonAgregar);
 
 
