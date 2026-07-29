@@ -184,6 +184,18 @@ input{
     
 }
 
+/* -- index -- */
+
+#divs{
+    
+    background-color:rgba(150, 150, 150, 0.1);
+    border-radius: 10px;
+    padding:25px;
+    margin: 2%;
+    text-align: center;
+    
+}
+
 
 
 
