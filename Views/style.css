@@ -130,6 +130,8 @@ table {
 
     overflow: hidden;
 
+    
+
 }
 
 thead {
@@ -196,6 +198,97 @@ input{
     
 }
 
+
+/* ========================= */
+/*       RESPONSIVIDAD       */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    /* Contenedor principal */
+
+    #divPrincipal {
+
+        width: 95%;
+
+        margin: 3% auto;
+
+        padding: 4%;
+
+    }
+
+
+    /* Título */
+
+    h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    /* Tabla */
+
+    table {
+
+        font-size: 13px;
+
+    }
+
+
+    /* Cabeceras */
+
+    th {
+
+        padding: 8px;
+
+        white-space: normal;
+
+    }
+
+
+    /* Datos */
+
+    td {
+
+        padding: 8px;
+
+    }
+
+
+    /* Botones de acciones */
+
+    .acciones {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+
+    .acciones button {
+
+        width: 100%;
+
+        padding: 7px 10px;
+
+        font-size: 12px;
+
+    }
+
+
+    /* Inputs */
+
+    input {
+
+        width: 100%;
+
+        margin: 5px 0;
+
+    }
+
+}
 
 
 

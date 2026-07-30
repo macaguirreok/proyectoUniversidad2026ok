@@ -150,6 +150,13 @@ const botonIngresarCinco = crearBoton("botonIngresar");
 botonIngresarCinco.textContent = "Ingresar";
 divCinco.appendChild(botonIngresarCinco);
 
+//! evento para botón ingresar al html de alumnos
+
+botonIngresarCinco.addEventListener("click", function(){
+window.location.href = "inscripciones.html";
+
+} );
+
 
 // Div seis -- Notas
 
@@ -167,6 +174,13 @@ divSeis.appendChild(subtituloSeis);
 const botonIngresarSeis = crearBoton("botonIngresar");
 botonIngresarSeis.textContent = "Ingresar";
 divSeis.appendChild(botonIngresarSeis);
+
+//! evento para botón ingresar al html de alumnos
+
+botonIngresarSeis.addEventListener("click", function(){
+window.location.href = "notas.html";
+
+} );
 
 
 // -- Mi nombre

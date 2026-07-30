@@ -1,0 +1,7 @@
+- Mejorar el botón crear (alumno, profesor, etc) que no aparezca cada vez que lo tocamos el form.
+- En la vista inscripción, en el form, agregar dos select uno en alumnos y otro en materia (cuando haga el real) y modificar el de año de cursada que esta feo.
+- Agregar botón a todas las vistas para volver al inicio (home o index).
+- interfaz notas: arreglar el responsive de la tabla. Y ver si en las otras interfaces si es que también pasa lo mismo. Cambiar y poner dos select en materia y en alumno en el form de registrar nota en el que queda finalmente como proyecto, en este prototipo puede quedar asi.
+
+próximo proyecto:
+- practicar media querys
