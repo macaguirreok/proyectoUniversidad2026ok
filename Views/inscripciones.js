@@ -97,6 +97,18 @@ function crearColumnaTbody(idNombre) {
     return td;
 }
 
+// ======================================
+//        BOTON VOLVER AL HOME
+// ======================================
+
+const contenedorBoton = document.createElement("div");
+contenedorBoton.id = "contenedorBoton";
+document.body.appendChild(contenedorBoton);
+
+
+const botonVolver = crearBoton("btnVolver");
+botonVolver.textContent = "Volver al inicio";
+contenedorBoton.appendChild(botonVolver);
 
 // ======================================
 //        CONTENEDOR PRINCIPAL
@@ -303,6 +315,16 @@ accionesHCUno.appendChild(botonEliminar);
 
 function crearFormulario() {
 
+    // Verificamos si ya existe el formulario
+    const formularioExistente = document.getElementById("formularioInscripcion");
+
+    // Si ya existe, terminamos la función
+    if (formularioExistente) {
+        return;
+    }
+
+
+    // Creamos el formulario
     const formulario = crearForm("formularioInscripcion");
 
     divPrincipal.appendChild(formulario);
@@ -361,7 +383,10 @@ function crearFormulario() {
 
     botonGuardar.textContent = "Guardar inscripción";
 
+    botonGuardar.type = "button";
+
     formulario.appendChild(botonGuardar);
+
 }
 
 
@@ -373,3 +398,9 @@ botonCrearInscripcion.addEventListener(
     "click",
     crearFormulario
 );
+
+//! Evento botón para volver al inicio
+
+botonVolver.addEventListener("click", function(){
+window.location.href = "index.html";
+});

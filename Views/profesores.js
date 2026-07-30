@@ -56,6 +56,19 @@ function crearInput(idNombre){
     return input;
 }
 
+// ======================================
+//        BOTON VOLVER AL HOME
+// ======================================
+
+const contenedorBoton = document.createElement("div");
+contenedorBoton.id = "contenedorBoton";
+document.body.appendChild(contenedorBoton);
+
+
+const botonVolver = crearBoton("btnVolver");
+botonVolver.textContent = "Volver al inicio";
+contenedorBoton.appendChild(botonVolver);
+
 
 //** Arrancamos con el primer div */
 
@@ -149,32 +162,59 @@ accionesHC.appendChild(botonEliminar);
 
 //* Me falta la parte de abajo ahora, el FORM
 
-function crearFormulario(){
+function crearFormulario() {
 
-const formulario = crearForm("formu");
-divPrincipal.appendChild(formulario);
+    // Verificamos si ya existe el formulario
+    const formularioExistente = document.getElementById("formu");
 
-//Agregamos el título
-const titulo = crearTextoh2("CrearProf");
-titulo.textContent = "Crear profesor";
-formulario.appendChild(titulo);
+    // Si ya existe, terminamos la función
+    if (formularioExistente) {
+        return;
+    }
 
-// Agrego el input
 
-const input = crearInput("inputNombre");
-input.placeholder = "Nombre del profesor";
-formulario.appendChild(input);
+    // Creamos el formulario
+    const formulario = crearForm("formu");
 
-const botonAgregar = crearBoton("guardar");
-botonAgregar.textContent = "Guardar profesor";
-formulario.appendChild(botonAgregar);
+    divPrincipal.appendChild(formulario);
 
+
+    // Agregamos el título
+    const titulo = crearTextoh2("CrearProf");
+
+    titulo.textContent = "Crear profesor";
+
+    formulario.appendChild(titulo);
+
+
+    // Agregamos el input
+    const input = crearInput("inputNombre");
+
+    input.placeholder = "Nombre del profesor";
+
+    formulario.appendChild(input);
+
+
+    // Agregamos el botón
+    const botonAgregar = crearBoton("guardar");
+
+    botonAgregar.textContent = "Guardar profesor";
+
+    botonAgregar.type = "button";
+
+    formulario.appendChild(botonAgregar);
 
 }
 
 // -- Eventos en el botón crear
 
 botonCrearProf.addEventListener("click" , crearFormulario);
+
+//! Evento botón para volver al inicio
+
+botonVolver.addEventListener("click", function(){
+window.location.href = "index.html";
+});
 
 
 

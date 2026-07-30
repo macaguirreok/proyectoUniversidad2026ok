@@ -1,4 +1,19 @@
 
+
+// ======================================
+//        BOTON VOLVER AL HOME
+// ======================================
+
+const contenedorBoton = document.createElement("div");
+contenedorBoton.id = "contenedorBoton";
+document.body.appendChild(contenedorBoton);
+
+
+const botonVolver = document.createElement("button");
+botonVolver.textContent = "Volver al inicio";
+botonVolver.className = "btnVolver";
+contenedorBoton.appendChild(botonVolver);
+
 //* Creo un contenedor principal
 
 const divPrincipal = document.createElement("div");
@@ -153,20 +168,35 @@ tdAcciones.appendChild(botonEliminar);
 
 //!primero: function mosrarFormulario
 
-function mostrarFormularioAlumno(){
+function mostrarFormularioAlumno() {
 
+    // Verificamos si ya existe el formulario
+    const formularioExistente = document.getElementById("formularioAlumno");
+
+    // Si ya existe, terminamos la función
+    if (formularioExistente) {
+        return;
+    }
+
+
+    // Creamos el formulario
     const formulario = document.createElement("form");
 
-    divPrincipal.appendChild(formulario);
-    //esto crea un formulario vacío, dentro del contenedor principal.
+    // Le asignamos un id para poder identificarlo
+    formulario.id = "formularioAlumno";
 
-    // -- Agregamos el titulo:
+    // Agregamos el formulario al contenedor principal
+    divPrincipal.appendChild(formulario);
+
+
+    // -- Agregamos el título:
 
     const tituloFormulario = document.createElement("h2");
-    
-    tituloFormulario.textContent = "Crear alumno ";
+
+    tituloFormulario.textContent = "Crear alumno";
 
     formulario.appendChild(tituloFormulario);
+
 
     // -- Agregamos el campo de nombre:
 
@@ -176,7 +206,8 @@ function mostrarFormularioAlumno(){
 
     formulario.appendChild(inputNombre);
 
-    // -- y uno para edad:
+
+    // -- Agregamos el campo de edad:
 
     const inputEdad = document.createElement("input");
 
@@ -184,18 +215,26 @@ function mostrarFormularioAlumno(){
 
     formulario.appendChild(inputEdad);
 
-    // -- y el boton guardar
+
+    // -- Agregamos el botón guardar:
 
     const botonGuardar = document.createElement("button");
 
     botonGuardar.textContent = "Guardar alumno";
 
     formulario.appendChild(botonGuardar);
+
 }
 
 //! usamos la función en el evento:
 
 botonCrearALumnos.addEventListener("click" , mostrarFormularioAlumno);
+
+//! Evento botón para volver al inicio
+
+botonVolver.addEventListener("click", function(){
+window.location.href = "index.html";
+});
 
 
 

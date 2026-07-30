@@ -24,7 +24,7 @@ body {
 
    width: 90%;
 
-   margin: 5% auto;
+   margin: 20px auto;
 
    padding: 5%;
 
@@ -198,9 +198,19 @@ input{
     
 }
 
+/* -- Contenedor del botón volver -- */
 
+#contenedorBoton {
+
+    display: flex;
+    justify-content: flex-end;
+    margin: 2% 5% ;
+
+}
+
+/*-----------------------------------------------------------------------------*/
 /* ========================= */
-/*       RESPONSIVIDAD       */
+/*       RESPONSIVIDAD       */ 
 /* ========================= */
 
 @media (max-width: 768px) {
